@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: cursive;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+
+    }
+    .wrapper{
+        width:70%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        width:70%;
+        height: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+
+
+    }
+    form input{
+       
+        width: 60%;
+        height: 80px;
+        border-radius: 20px;
+
+    }
+    form button{
+        width: 20%;
+        height: 40px;
+        font-size: large;
+        background-color: lightslategray;
+        border: none;
+        border-radius: 20px;
+        
+    }
+    .output{
+        margin-top: 20px;
+        font-size: 20px;
+        color: lightslategray;
+    }
+</style>
+<body>
+
+
+    <div class="container">
+        <div class="wrapper">
+            <h1 style="font-size: 70px;">URL SHORTNER</h1>
+            <form method="post" action="/url">
+            <input type="text" name="url" placeholder="Enter Url" />
+            <button type="submit">Submit</button>
+        </form>
+        <% if (shortUrl) { %>
+            <p class="output">http://localhost:3000/<%=shortUrl %></p>
+            <% } %>
+        </div>
+    </div>
+
+</body>
+</html>
